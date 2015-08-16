@@ -1,8 +1,23 @@
 User.create(username: 'admin', password_hash: '123', email: 'admin@admin.com')
 
 Playlist.create(user_id: 1, title: "My Books")
+Playlist.create(user_id: 1, title: "English 352")
+Playlist.create(user_id: 1, title: "Spanish 231")
+Playlist.create(user_id: 1, title: "Favorites")
+
+Playlist.create(user_id: 2, title: "My Books")
 Playlist.create(user_id: 2, title: "English 352")
+Playlist.create(user_id: 2, title: "Spanish 231")
+Playlist.create(user_id: 2, title: "Favorites")
+
+Playlist.create(user_id: 3, title: "My Books")
+Playlist.create(user_id: 3, title: "English 352")
 Playlist.create(user_id: 3, title: "Spanish 231")
+Playlist.create(user_id: 3, title: "Favorites")
+
+Playlist.create(user_id: 4, title: "My Books")
+Playlist.create(user_id: 4, title: "English 352")
+Playlist.create(user_id: 4, title: "Spanish 231")
 Playlist.create(user_id: 4, title: "Favorites")
 
 Book.create(playlist_id: 1, title: "My Experience as an Executioner", description: "From 1884 until 1891, James Berry was an executioner. In this time he carried out 131 hangings. In this memoir he writes about the methods he used, and the final moments of some of those he executed.", author: "James Berry", photo_url: "/executioner.jpg", audio_link_mpg: "/executioner.mp3")
