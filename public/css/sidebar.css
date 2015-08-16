@@ -1,0 +1,23 @@
+#menu {
+  background-color: #191818;
+  position: fixed;
+  width: 160px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+#menu a {
+  color: #999;
+  padding-top: 20px;
+}
+
+#menu .pure-menu ul {
+  border-top: 1px solid #333
+}
+
+#page_container {
+  margin-left: 160px;
+  text-align: center;
+  max-width: 100%
+}

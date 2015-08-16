@@ -1,2 +1,31 @@
 <!-- Library Page -->
 
+<%= erb :"books/_sidebar" %>
+
+<div id="page_container">
+  <h3>Books</h3>
+
+  <%# if @books.count < 1 %>
+  <!-- <p id="no-books-message">This playlist is empty. Add a book.</p> -->
+  <%# end %>
+
+  <ul id="book_list">
+    <% @books.each do |t| %>
+    <li id="<%= t.id %>" class="outer">
+      <ul class="pure-menu-list">
+        <li><img src="<%= t.photo_url %>" class="book-thumbnail"></li>
+        <li><%= t.title %></li>
+        <li class="author pure-menu-item">by <%= t.author %></li>
+        <li>
+          <audio controls>
+          <source src="<%= t.audio_link_ogg %>" type="audio/ogg">
+          <source src="<%= t.audio_link_mpg %>" type="audio/mpeg">
+            Your browser does not suppor the audio element.
+          </audio>
+        </li>
+      </ul>
+    <% end %>
+  </ul>
+
+<p>&#9734;</p>
+</div>
