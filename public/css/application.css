@@ -4,7 +4,7 @@ div.center {
 
   /*width: 6em*/
 }
-/*body {
+div.background {
   background-image: url("images/bookback.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,4 +13,14 @@ div.center {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}*/
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100%;
+  position: fixed;
+}
+
+button {
+  padding; 10px;
+}
