@@ -13,13 +13,13 @@
     <% @books.each do |t| %>
     <li id="<%= t.id %>" class="outer">
       <ul class="pure-menu-list">
-        <li><img src="<%= t.photo_url %>" class="book-thumbnail"></li>
-        <li><%= t.title %></li>
-        <li class="author pure-menu-item">by <%= t.author %></li>
+        <img src="<%= t.photo_url %>" class="book-thumbnail">
+        <li class="title"><%= t.title %></li>
+        <li class="author">by <%= t.author %></li><br/>
         <li>
           <audio controls>
             <!-- <source src="<%= t.audio_link_ogg %>" type="audio/ogg"> -->
-            <source src="<%= t.audio_link_mpg %>" type="audio/mpeg">
+            <source src="<%= t.audio_link_mpg %>" type="audio/mpeg" class ="audiobox">
               Your browser does not suppor the audio element.
           </audio>
         </li>
