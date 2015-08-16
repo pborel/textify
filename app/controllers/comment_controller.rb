@@ -7,13 +7,13 @@ post '/users/:user_id/playlists/:playlist_id/books/:book_id/comments' do
 
   comment = Comment.create(
     user_id: params[:user_id],
-    playlist_id: params[:playlist_id],
+    book_id: params[:book_id],
     body: params[:body],
     username: username
     )
 
   if request.xhr?
-    response = comment.to_json
+    comment.to_json
   else
     redirect "/users/#{params[:owner_id]}/playlists/#{params[:playlist_id]}/books/#{comment.book_id}/comments"
   end

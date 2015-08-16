@@ -6,6 +6,7 @@
 
 get '/users/:user_id/playlists/:playlist_id/books/:id' do
   @book = Book.find(params[:id])
+  @playlist = Playlist.find(params[:playlist_id])
 
   erb :"books/book"
 end
