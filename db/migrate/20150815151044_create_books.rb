@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string  :audio_link_ogg
       t.string  :author
       t.string  :photo_url
+      t.string  :publish_year
 
       t.timestamps null: false
     end
