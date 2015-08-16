@@ -1,0 +1,29 @@
+.comment {
+  text-align: left;
+}
+
+#comment_area {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+#comment_area h3 {
+  text-align: left;
+  margin-top: 0;
+}
+
+ul#comment_list {
+  list-style-type: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+ul#comment_list li.outer {
+  display: block;
+  padding: 6px 25px;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin: 7px 0px;
+  text-align: left;
+}
