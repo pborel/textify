@@ -1,5 +1,3 @@
 get '/' do
-"hello"
-
-erb :login
+ erb :"users/login"
 end
