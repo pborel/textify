@@ -10,7 +10,7 @@ require 'mongo'
 require 'json/ext' # required for .to_json
 
 configure do
-  db = Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'test')
+  db = Mongo::Client.new([ '192.168.0.78:27017' ], :database => 'firstDB')
   set :mongo_db, db[:test]
 end
 
