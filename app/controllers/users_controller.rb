@@ -2,9 +2,10 @@ get '/' do
   erb :"users/login"
 end
 
-post '/' do
+post '/login' do
   @user = User.find_by(username: params[:username])
   if @user.password_hash == params[:password_hash]
+    login
     redirect '/users/:id/books'
   else
     redirect '/'
@@ -12,14 +13,15 @@ post '/' do
   end
 end
 
-post '/signup' do
+post '/users' do
 
-  @user = User.create(username: params[:username], password_hash: params[:password_hash], email: params[:email])
+  @user = User.create(username: params[:username], password: params[:password], email: params[:email])
 
-    redirect '/users/:id/'
+    redirect '/users/:id/books'
 end
 
-get '/users/:id/books' do
+
+get '/users/:id' do
 
   erb :"users/profile"
 end

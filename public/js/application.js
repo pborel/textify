@@ -10,8 +10,9 @@ $(document).ready(function() {
 
 var replaceForm = function(){
 
-  $('.signup').click(function(){
-     $('.formroute').html("<form action='/signup' method='post'>");
+  $('#submitbutton').click(function(){
+     $('.formReplace1').replaceWith("<form action='/signup' method='post'>");
+     $('.formReplace2').replaceWith("<input type='text' name='email' id='email' required>");
   })
 }
 // func signupToggle = function(){
