@@ -12,6 +12,6 @@
     <p><%= @book.description %></p>
   </div>
 
-  <%#= erb :"comments/_index" %>
-  <%#= erb :"comments/_new" %>
+  <%= erb :"comments/_index", locals: { book: @book } %>
+  <%= erb :"comments/_new" %>
 </div>

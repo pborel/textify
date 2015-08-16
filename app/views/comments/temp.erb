@@ -1,0 +1,32 @@
+<% if t.user_id == current_user.id %>
+          <li class="pure-menu-item">
+            <form method="post" class="pure-form pure-form-aligned comment-delete" action="/users/<%= t.user_id %>/playlist/<%= t.playlist_id %>/books/<%= t.book_id %>/comments/<%= t.id %>/delete">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="owner_id" value="<%#= owner_id %>">
+              <input type="hidden" name="playlist_id" value="<%= book_id %>">
+              <input type="submit" value="Delete" class="button-success pure-button">
+            </form>
+          </li>
+          <% end %>
+
+<% if t.user_id == current_user.id %>
+          <li class="pure-menu-item">
+            <!-- On click show edit form and save button -->
+            <input type="submit" value="Edit" class="button-success pure-button comment-hide">
+
+            <!-- Shown on click of edit button above -->
+            <form method="post" class="pure-form pure-form-aligned comment-show" id="<%= "#{t.id}" %>" action="/users/<%= t.user_id %>/playlist/<%= params[:playlist_id] %>/books/t.book_id/comments/<%= t.id %>">
+              <input type="hidden" name="_method" value="put">
+              <input type="hidden" name="owner_id" value="<%= owner_id %>">
+              <input type="hidden" name="playlist_id" value="<%= playlist_id %>">
+
+              <!-- update body of comment -->
+              <div class="pure-control-group">
+                <textarea class="pure-input-1-2 comment-edit" name="body" placeholder="<%= t.body %>" value="<%= t.body %>"></textarea>
+              </div>
+
+              <!-- save comment button -->
+              <input type="reset" value="Save" class="button-success pure-button save-updated-comment" id="<%= t.id %>">
+            </form>
+          </li>
+          <% end %>

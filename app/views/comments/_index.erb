@@ -1,51 +1,19 @@
-<link rel="stylesheet" href="/css/comment.css">
+<!-- <link rel="stylesheet" href="/css/comment.css"> -->
 
   <div id="comment_area">
     <h3>Comments</h3>
 
-    <% if @challenge.comments.count < 1 %>
+    <% if @book.comments.count < 1 %>
       <p id="no-comments-message">No comments :( - Add the first one! :D</p>
     <% end %>
 
     <ul id="comment_list">
-      <% pool.each do |t| %>
+      <% @book.comments.each do |t| %>
       <li id="<%= t.id %>" class="outer">
         <span><%= t.body %></span>
         <ul class="pure-menu-list">
           <li class="author pure-menu-item">by <a href="/users/<%= t.user_id %>"><%= get_username(t.user_id) %></a></li>
           <!-- If the user made the comment, show delete button -->
-          <% if t.user_id == current_user.id or owner_id == current_user.id %>
-          <li class="pure-menu-item">
-            <form method="post" class="pure-form pure-form-aligned comment-delete" action="/users/<%= t.user_id %>/challenges/<%= challenge_id %>/comments/<%= t.id %>/delete">
-              <input type="hidden" name="_method" value="delete">
-              <input type="hidden" name="owner_id" value="<%= owner_id %>">
-              <input type="hidden" name="challenge_id" value="<%= challenge_id %>">
-              <input type="submit" value="Delete" class="button-success pure-button">
-            </form>
-          </li>
-          <% end %>
-
-          <% if t.user_id == current_user.id %>
-          <li class="pure-menu-item">
-            <!-- On click show edit form and save button -->
-            <input type="submit" value="Edit" class="button-success pure-button comment-hide">
-
-            <!-- Shown on click of edit button above -->
-            <form method="post" class="pure-form pure-form-aligned comment-show" id="<%= "#{t.id}" %>" action="/users/<%= t.user_id %>/challenges/<%= challenge_id %>/comments/<%= t.id %>">
-              <input type="hidden" name="_method" value="put">
-              <input type="hidden" name="owner_id" value="<%= owner_id %>">
-              <input type="hidden" name="challenge_id" value="<%= challenge_id %>">
-
-              <!-- update body of comment -->
-              <div class="pure-control-group">
-                <textarea class="pure-input-1-2 comment-edit" name="body" placeholder="<%= t.body %>" value="<%= t.body %>"></textarea>
-              </div>
-
-              <!-- save comment button -->
-              <input type="reset" value="Save" class="button-success pure-button save-updated-comment" id="<%= t.id %>">
-            </form>
-          </li>
-          <% end %>
         </ul>
       </li>
       <% end %>
