@@ -1,4 +1,6 @@
 get '/users/:user_id/books' do
+  @books = Book.all
+
   erb :"books/index"
 end
 
