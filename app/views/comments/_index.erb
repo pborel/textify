@@ -1,0 +1,20 @@
+<!-- <link rel="stylesheet" href="/css/comment.css"> -->
+
+  <div id="comment_area">
+    <h3>Comments</h3>
+
+    <% if @book.comments.count < 1 %>
+      <p id="no-comments-message">No comments :( - Add the first one! :D</p>
+    <% end %>
+
+    <ul id="comment_list">
+      <% @book.comments.each do |t| %>
+      <li id="<%= t.id %>" class="outer">
+        <span><%= t.body %></span>
+        <ul class="pure-menu-list">
+          <li class="author pure-menu-item">by <a href="/users/<%= t.user_id %>"><%= get_username(t.user_id) %></a></li>
+          <!-- If the user made the comment, show delete button -->
+        </ul>
+      </li>
+      <% end %>
+    </ul>

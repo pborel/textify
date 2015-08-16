@@ -1,0 +1,24 @@
+<div id="layout">
+  <div id="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+          <a href="#" class="pure-menu-link">My Books</a>
+        </li>
+        <li class="pure-menu-item">
+          <a href="#" id="menuLink1" class="pure-menu-link">Playlists</a>
+          <% if playlists.count > 1 %>
+            <ul class="pure-menu-children">
+              <% playlists.each do |t| %>
+                <li class="pure-menu-item"><a href="/users/<%= current_user.id %>/playlists/<%= t.id %>" class="pure-menu-link"><%= t.title %></a></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </li>
+        <li class="pure-menu-item">
+          <a href="#" class="pure-menu-link">Trending</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
