@@ -141,3 +141,32 @@ button {
   max-width: 940px;
   min-width: 900px;
 }
+
+table.book {
+  border: none;
+}
+
+table.book tr {
+  max-width: 100%;
+}
+
+table.book tbody td {
+  margin: auto 0;
+}
+
+.audio {
+  max-width: 900px;
+  float: right;
+}
+
+.audio-container {
+  max-width: 900px;
+}
+
+td.star {
+  margin: 0;
+}
+
+td.star a {
+  margin: 0;
+}
