@@ -1,0 +1,16 @@
+<li id="<%= t.id %>" class="outer">
+      <table class="pure-table pure-table-horizontal">
+       <li class="pure-menu-list">
+          <a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><img src="<%= t.photo_url %>" class="book-thumbnail"></a>
+          <li class="title"><a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><%= t.title %></a></li>
+          <li class="author">by <%= t.author %></li><br/>
+          <li>
+            <audio controls>
+              <source src="<%= t.audio_link_mpg %>" t`ype="audio/mpeg" class ="audiobox">
+                Your browser does not suppor the audio element.
+            </audio>
+          </li>
+        </li>
+      </li>
+
+      </ul>
