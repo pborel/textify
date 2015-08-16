@@ -31,7 +31,8 @@ post '/login' do
     #   session[:remember_me] = nil
     # end
     redirect "/users/#{user.id}/books"
-  else
+   else
+  flash[:notice] = "Incorrect password or username!"
     redirect '/login?error=true'
   end
 end
@@ -45,7 +46,8 @@ post '/users' do
     session[:id] = user.id
     redirect '/users/:id/books'
   else
-    redirect '/signup?error=true'
+    flash[:notice] = "Incorrect password or username!"
+    # redirect '/signup?error=true'
   end
 end
 
