@@ -18,12 +18,12 @@
         <li class="author pure-menu-item">by <%= t.author %></li>
         <li>
           <audio controls>
-          <source src="<%= t.audio_link_ogg %>" type="audio/ogg">
-          <source src="<%= t.audio_link_mpg %>" type="audio/mpeg">
-            Your browser does not suppor the audio element.
+            <!-- <source src="<%= t.audio_link_ogg %>" type="audio/ogg"> -->
+            <source src="<%= t.audio_link_mpg %>" type="audio/mpeg">
+              Your browser does not suppor the audio element.
           </audio>
         </li>
-        €<li>&#9734;</li>
+        <li>&#9734;</li>
       </ul>
     <% end %>
   </ul>
