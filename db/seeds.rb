@@ -1,4 +1,4 @@
-User.create(username: 'admin', password_hash: '123', email: 'admin@admin.com')
+User.create(username: 'admin', password_hash: '123', email: 'admin@admin.com', date_of_birth: '12-12-90', gender: 'male', location: 'usa', name:'name')
 
 Playlist.create(user_id: 1, title: "My Books")
 Playlist.create(user_id: 1, title: "English 352")
