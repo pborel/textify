@@ -5,26 +5,50 @@
 <div id="page_container">
   <h3><%= @playlists.find(params[:id] || 1).title %></h3>
 
-  <%# if @books.count < 1 %>
-  <!-- <p id="no-books-message">This playlist is empty. Add a book.</p> -->
-  <%# end %>
-
   <ul id="book_list">
     <% @playlists.find(params[:id] || 1).books.each do |t| %>
     <li id="<%= t.id %>" class="outer">
-      <ul class="pure-menu-list">
-        <a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><img src="<%= t.photo_url %>" class="book-thumbnail"></a>
-        <li class="title"><a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><%= t.title %></a></li>
-        <li class="author">by <%= t.author %></li><br/>
-        <li>
-          <audio controls>
-            <source src="<%= t.audio_link_mpg %>" type="audio/mpeg" class ="audiobox">
-              Your browser does not suppor the audio element.
-          </audio>
+
+      <table class="book pure-table pure-table-horizontal">
+       <tbody>
+        <tr>
+       <td>
+          <a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><img src="<%= t.photo_url %>" class="book-thumbnail"></a></td>
+          <td>
+          <div class="title"><a href="/users/<%= params[:user_id] %>/playlists/<%= t.playlist_id %>/books/<%= t.id %>"><%= t.title %></a></div>
+          <div class="author">by <%= t.author %></div></td>
+          <td class="audio-container">
+            <audio controls class="audio">
+              <source src="<%= t.audio_link_mpg %>" type="audio/mpeg" class ="audiobox">
+                Your browser does not support the audio element.
+            </audio>
+          </td>
+          <td class="star">
+            <div class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+              <a href="#" id="menuLink1" class="pure-menu-link">&#9734;</a>
+              <ul class="pure-menu-children">
+                <% @playlists.each do |t| %>
+
+
+                  <form action="/users/<%= t.user_id %>/playlists/<%= t.id %>/books" method="post">
+                    <input type="hidden" name="author" value="<%= t.books %>">
+                    <input type="hidden" name="photo_url">
+                    <input type="hidden" name="audio_link_mpg">
+                    <input type="hidden" name="title">
+                    <input type="hidden" name="description">
+                    <li class="pure-menu-item">
+                      <input class="pure-menu-link" type="submit" value="<%= t.title %>">
+                    </li>
+                  </form>
+                <% end %>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
         </li>
-        <!-- <li>&#9734;</li> -->
-      </ul>
     <% end %>
-  </ul>
+      </ul>
 
 </div>
