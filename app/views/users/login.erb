@@ -1,24 +1,38 @@
-<form class ="pure-form pure-form-aligned" id="1" action="/users" method="post">
-  <div class="pure-control-group">
-    <label for ="username">username</label>
-    <input type="text" name="username" id="name" required>
-  </div>
+<style>
+  body {
+    background-image: url("images/bookback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+</style>
+<div class="center">
+  <form class ="pure-form pure-form-aligned" action="/login" method="post">
+    <div class="pure-control-group">
+      <label for ="username">username</label>
+      <input type="text" name="username" id="name" required>
+    </div>
 
-  <div class="pure-control-group">
-    <label for ="password">Password</label>
-    <input type="password" name="password_hash" id="ps" required>
-  </div>
+    <div class="pure-control-group">
+      <label for ="password">Password</label>
+      <input type="password" name="password_hash" id="ps" required>
+    </div>
 
-  <div class="pure-control-group">
-    <label for ="email">Email</label>
-    <input type="text" class="formreplace2" name="email" id="email">
-  </div>
+    <div class="pure-control-group">
+      <label for ="email">Email</label>
+      <input type="text" class="formreplace2" name="email" id="email">
+    </div>
 
-  <div class="pure-controls" >
-    <button type="submit" class="pure-botton pure-button-primary">login</button>
-    <button type="submit" class="pure-botton pure-button-primary" id="submitbutton">submit</button>
-  </div>
-</form>
+    <div class="pure-controls" >
+      <button type="submit" class="pure-botton pure-button-primary">login</button>
+      <button type="submit" class="pure-botton pure-button-primary" id="submitbutton">submit</button>
+    </div>
+  </form>
+</div>
 
 
 

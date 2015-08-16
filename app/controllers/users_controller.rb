@@ -21,7 +21,7 @@ post '/users' do
 end
 
 
-get '/users/:id/books' do
+get '/users/:id' do
 
   erb :"users/profile"
 end
