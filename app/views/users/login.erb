@@ -1,41 +1,28 @@
-<style>
-  body {
-    background-image: url("images/bookback.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-</style>
+<div class="background">
+
+
 <div class="center">
   <form class ="pure-form pure-form-aligned" action="/login" method="post">
     <div class="pure-control-group">
-      <label for ="username">username</label>
-      <input type="text" name="username" id="name" required>
+      <input type="text" name="username" id="name" placeholder="Username" required>
     </div>
 
     <div class="pure-control-group">
-      <label for ="password">Password</label>
-      <input type="password" name="password_hash" id="ps" required>
+      <input type="password" name="password_hash" id="ps" placeholder="Password" required>
     </div>
 
-    <div class="pure-control-group">
-      <label for ="email">Email</label>
-      <input type="text" class="formreplace2" name="email" id="email">
-    </div>
-
-    <div class="pure-controls" >
-      <button type="submit" class="pure-botton pure-button-primary">login</button>
-      <button type="submit" class="pure-botton pure-button-primary" id="submitbutton">submit</button>
+    <div class="pure-controls-group" >
+      <button type="submit" class="btn btn-sm btn-primary">Login</button>
+      <button type="submit" class="btn btn-sm btn-primary" id="submitbutton">Sign Up</button>
     </div>
   </form>
 </div>
 
+</div>
 
+<!-- <button type="button" class="btn btn-lg btn-primary">Primary</button> -->
 
+<!-- pure-botton pure-button-primary -->
 
 <!-- Password<br>
 <input type="text" type ="hidden" name="password_hash" >
