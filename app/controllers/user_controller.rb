@@ -30,8 +30,13 @@ post '/login' do
     # else
     #   session[:remember_me] = nil
     # end
-    redirect "/users/#{current_user.id}/playlists"
+    redirect "/users/#{user.id}/playlists"
+   #else
+    # redirect "/users/#{current_user.id}/playlists"
   else
+    p "*"*100
+    p params
+    flash[:notice] = "Incorrect password or username!"
     redirect '/login?error=true'
   end
 end
@@ -45,7 +50,8 @@ post '/users' do
     session[:id] = user.id
     redirect "/users/#{current_user.id}/playlists"
   else
-    redirect '/signup?error=true'
+    flash[:notice] = "Incorrect password or username!"
+    # redirect '/signup?error=true'
   end
 end
 
