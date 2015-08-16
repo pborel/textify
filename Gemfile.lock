@@ -17,9 +17,6 @@ GEM
     arel (6.0.0)
     backports (3.6.4)
     bcrypt (3.1.10)
-    bson (1.12.3)
-    bson_ext (1.12.3)
-      bson (~> 1.12.3)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -32,16 +29,16 @@ GEM
       activesupport (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
-    haml (4.0.7)
-      tilt
+    httparty (0.13.5)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     json (1.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
-    mongo (1.12.3)
-      bson (= 1.12.3)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.18.1)
@@ -93,16 +90,11 @@ DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
   bcrypt
-  bson
-  bson_ext
   capybara
   factory_girl
   faker
-  haml
-  mongo
+  httparty
   pg
-  rack
-  rack-protection
   rack-test
   rake
   rspec (~> 3.0)
@@ -110,7 +102,6 @@ DEPENDENCIES
   shoulda-matchers
   sinatra
   sinatra-contrib
-  tilt
 
 BUNDLED WITH
    1.10.6

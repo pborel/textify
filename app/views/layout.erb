@@ -34,9 +34,9 @@
 <body>
   <div class="pure-menu pure-menu-horizontal">
     <a href="/" class="pure-menu-heading pure-menu-link">PAIRLY</a>
-    <%# if session[:id] %>
+    <% if session[:id] %>
       <%= erb :_navbar %>
-    <%# end %>
+    <% end %>
   </div>
 
   <%= yield %>

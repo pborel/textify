@@ -15,13 +15,7 @@ gem 'rake'
 
 gem 'shotgun'
 
-gem 'tilt'
-gem 'rack'
-gem 'bson'
-gem 'bson_ext'
-gem 'haml'
-gem 'mongo'
-gem 'rack-protection'
+gem 'httparty'
 
 group :test do
   gem 'shoulda-matchers'
