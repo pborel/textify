@@ -5,14 +5,14 @@ require ::File.expand_path('../config/environment', __FILE__)
 # Include all of ActiveSupport's core class extensions, e.g., String#camelize
 require 'active_support/core_ext'
 
-require 'rubygems'
-require 'mongo'
-require 'json/ext' # required for .to_json
+# require 'rubygems'
+# require 'mongo'
+# require 'json/ext' # required for .to_json
 
-configure do
-  db = Mongo::Client.new([ '192.168.0.78:27017' ], :database => 'firstDB')
-  set :mongo_db, db[:test]
-end
+# configure do
+#   db = Mongo::Client.new([ '192.168.0.78:27017' ], :database => 'firstDB')
+#   set :mongo_db, db[:test]
+# end
 
 namespace :generate do
   desc "Create an empty model in app/models, e.g., rake generate:model NAME=User"
