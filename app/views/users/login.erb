@@ -1,21 +1,9 @@
 
 <div class="background">
-<!-- <div class="topbar pullDown"></div> -->
-<!-- div class ="hello fade-in" ><h1>Hello<h1> </div>
- -->
-<!-- <div class="box fade-in one">
-       look at me fade in
 </div>
- 
-<div class="box fade-in two">
-       Oh hi! i can fade too!
-</div>
- 
-<div class="box fade-in three">
-       Oh hi! i can fade three!
-</div>xz -->
+
 <h1 class="company fade-in">Textify</h1>
-<h4 class = "small-text fade-in">All the textbooks audio you need, for free.</h4>
+<h4 class = "small-text fade-in">All the audio textbooks you need, for free.</h4>
 
 <div class="center slideUp" >
   
@@ -24,13 +12,8 @@
       <input type="text" name="username" id="name" placeholder="Username" required>
     </div>
 
-<<<<<<< HEAD
     <div class="pure-control-group fade-in" >
       <input type="password" name="password_hash" id="ps" placeholder="Password" required>
-=======
-    <div class="pure-control-group">
-      <input type="password" name="password_attempt" id="ps" placeholder="Password" required>
->>>>>>> 4dbaeb7fe46402c276e007fd32b3bcf2c9998ff3
     </div>
 
     <div class="pure-controls-group fade-in">
@@ -38,6 +21,9 @@
       <!-- <button type="submit" class="btn btn-sm btn-primary" id="submitbutton">Sign Up</button> -->
     </div>
   </form>
+  <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
 </div>
 
 </div>

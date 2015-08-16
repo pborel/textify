@@ -25,6 +25,12 @@ button {
   margin-top: 10px;
 }
 
+.notice {
+  color: white;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
 .company {
   color: white;
   font-size: 10em;

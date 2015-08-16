@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
+gem 'sinatra-flash'
 
 gem 'httparty'
 
