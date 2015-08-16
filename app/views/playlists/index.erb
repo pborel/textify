@@ -5,8 +5,8 @@
 <div id="page_container">
   <h3><%= @playlists.find(params[:id] || 1).title %></h3>
 
-  <%# if @books.count < 1 %>
-  <!-- <p id="no-books-message">This playlist is empty. Add a book.</p> -->
+  <%# if @playlist.books.count < 1 %>
+    <!-- <p id="no-books-message">This playlist is empty. Add a book.</p> -->
   <%# end %>
 
   <ul id="book_list">
@@ -22,7 +22,14 @@
               Your browser does not suppor the audio element.
           </audio>
         </li>
-        <!-- <li>&#9734;</li> -->
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <a href="#" id="star" class="pure-menu-link">&#9734;</a>
+            <ul class="pure-menu-children">
+              <% @playlists.each do |t| %>
+                <li class="pure-menu-item"><a href="/users/<%= current_user.id %>/playlists/<%= t.id %>" class="pure-menu-link"><%= t.title %></a></li>
+              <% end %>
+            </ul>
+        </li>
       </ul>
     <% end %>
   </ul>

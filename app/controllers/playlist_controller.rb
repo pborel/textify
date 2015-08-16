@@ -6,7 +6,10 @@ get '/users/:user_id/playlists' do
 end
 
 get '/users/:user_id/playlists/:id' do
-  erb :"playlists/playlist"
+  @playlists = Playlist.where(user_id: current_user.id)
+  @id = params[:id]
+
+  erb :"playlists/index"
 end
 
 put '/users/:user_id/playlists/:id' do
@@ -15,6 +18,6 @@ put '/users/:user_id/playlists/:id' do
               # playlists: params[:playlist],
               # comments: params[:comment])
 
-  erb :"playlists/playlist"
+erb :"playlists/playlist"
 end
 
