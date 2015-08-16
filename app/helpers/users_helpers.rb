@@ -1,21 +1,24 @@
 helpers do
 
-  def login
-    session[:user_id] = @user.id
+  def current_user(username = nil)
+    user ||= User.find_by(username: username) || User.find_by(id: session[:id])
+  end
+
+  def login!
+    session[:id] = current_user.id
   end
 
   def logged_in?
-    if session[:user_id] == @user.id
-    end
+    !!session[:id]
   end
 
- def logout
-   session[:user_id] = nil
+  def password_match?(args)
+    args.fetch(:password_attempt) == args.fetch(:user).password_hash
+  end
+
+ def logout!
+   session[:id] = nil
  end
-
-  def current_user
-    @user ||=  User.find(session[:user_id])
-  end
 
 end
 

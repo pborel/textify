@@ -1,7 +1,7 @@
 #menu {
   background-color: #191818;
   position: fixed;
-  width: 160px;
+  width: 140px;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -9,7 +9,8 @@
 
 #menu a {
   color: #999;
-  padding-top: 20px;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 #menu .pure-menu ul {

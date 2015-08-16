@@ -1,3 +1,4 @@
+
 # Set up gems listed in the Gemfile.
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
@@ -21,6 +22,8 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'bcrypt'
+
+require 'httparty'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
