@@ -34,6 +34,7 @@ post '/login' do
    #else
     # redirect "/users/#{current_user.id}/playlists"
   else
+    p "*"*100
     p params
     flash[:notice] = "Incorrect password or username!"
     redirect '/login?error=true'
