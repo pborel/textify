@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :books
+  has_many :playlists
 
 
   def password

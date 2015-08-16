@@ -1,4 +1,4 @@
 class Book < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :playlist
   has_many :comments
 end

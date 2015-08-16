@@ -1,0 +1,9 @@
+<form action="/users/<%= current_user.id %>/playlists/<%= @playlist.id %>/books/<%= @book.id %>/comments" method="post" class="pure-form comment">
+
+  <textarea class="pure-input-1-2" name='body'id="comment-data"  placeholder='Comment. . .' required></textarea>
+  <br><br>
+
+  <input type='hidden' name='owner_id' value='<%= owner_id %>'>
+
+  <input class="pure-button pure-button-primary add-comment" type='reset' value='Comment'>
+</form>
