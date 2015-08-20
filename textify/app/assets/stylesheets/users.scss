@@ -1,0 +1,58 @@
+
+
+.mainprofile{
+  width: 500px;
+  height: 500px;
+  border-style: solid;
+  margin-left: 25%;
+  margin-top: 10%;
+  border-radius: 10%;
+  border-color: #cccccc;
+  background-color: #dddddd;
+}
+
+
+.username{
+  padding-top: 25px;
+  text-align: center;
+  font-size: 200%;
+}
+
+.photo{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.actualphoto{
+  width: 60%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+}
+
+.info{
+  padding-left: 50px;
+}
+
+.editButton{
+  margin-left: 35%;
+  /*text-align: center;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+.panel-footer{
+  padding: 20px;
+  width:480px;
+  height:50px;
+}
+
+
+
+
+
+

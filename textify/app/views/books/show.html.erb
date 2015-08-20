@@ -1,0 +1,21 @@
+<div class="container">
+<div class="art-work-container">
+
+  <img src="<%= @book.photo_url %>" class="art-work">
+
+  <audio controls class="overlay">
+    <source src="<%= @book.audio_link_mpg %>" type="audio/mpeg" class ="audiobox">
+      Your browser does not suppor the audio element.
+  </audio>
+
+  <div class="description">
+    <h2>Description</h2>
+    <p><%= @book.description %></p>
+  </div>
+
+  <div class="block">
+    <%= erb :"comments/_index", locals: { book: @book } %>
+    <%= erb :"comments/_new" %>
+  </div>
+</div>
+</div>
