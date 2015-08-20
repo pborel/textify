@@ -73,7 +73,6 @@ ul#book_list li.outer {
   margin: 7px 20px 0px 20px;
   text-align: left;
   height: 200px;
-
 }
 
 #menuLink1 {
@@ -81,8 +80,7 @@ ul#book_list li.outer {
 
 .pure-menu-children li {
   font-family: 'Quattrocento', serif;
-  border 10px solid #ccc;
-
+  /*border 10px solid #ccc;*/
 }
 
 .pure-menu-children {

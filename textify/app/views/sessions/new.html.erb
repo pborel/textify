@@ -8,12 +8,10 @@
   <%= form_for @user, url: create_session_path, html: { class: "pure-form pure-form-aligned" } do |f| %>
 
     <div class="pure-control-group fade-in">
-      <%= f.label :username %>
       <%= f.text_field :username, class: "pure-input-rounded" %>
     </div>
 
     <div class="pure-control-group fade-in">
-      <%= f.label :password %>
       <%= f.password_field :password, class: "pure-input-rounded" %>
     </div>
 
