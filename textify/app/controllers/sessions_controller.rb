@@ -5,11 +5,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(username: user_params[:username])
+    p user
+    puts '*' * 50
     if user.password == params[:password]
       session[:user_id] = user.id
-      redirect_to user
+      redirect_to user_playlists_path(user.id)
     else
-      redirect_to user
+      redirect_to login_path
     end
   end
 

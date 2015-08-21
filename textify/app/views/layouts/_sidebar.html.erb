@@ -9,8 +9,8 @@
           <a href="#" id="menuLink1" class="pure-menu-link">Playlists</a>
           <% if playlists.count > 1 %>
             <ul class="pure-menu-children">
-              <% playlists.each do |t| %>
-                <li class="pure-menu-item"><a href="/users/<%= current_user.id %>/playlists/<%= t.id %>" class="pure-menu-link"><%= t.title %></a></li>
+              <% playlists.each do |playlist| %>
+                <li class="pure-menu-item"><a href="<%= user_playlist_path(playlist.user_id, playlist.id) %>" class="pure-menu-link"><%= playlist.title %></a></li>
               <% end %>
             </ul>
           <% end %>

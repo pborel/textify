@@ -1,6 +1,6 @@
 <!-- Library Page -->
 
-<%= erb :"playlists/_sidebar", locals: { playlists: @playlists } %>
+<%= render partial: "layouts/sidebar", locals: { playlists: @playlists } %>
 
 <div id="page_container">
   <h1><%= @playlists.find(params[:id] || 1).title %></h1>
