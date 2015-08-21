@@ -1,0 +1,40 @@
+
+<div class="background">
+</div>
+
+<h1 class="company fade-in">Textify</h1>
+<h4 class = "small-text fade-in">All the audio textbooks you need, for free.</h4>
+
+<div class="center slideUp" >
+
+  <form class ="pure-form pure-form-aligned" action="/login" method="post">
+    <div class="pure-control-group fade-in">
+      <input type="text" name="username" id="name" placeholder="Username" required>
+    </div>
+
+    <div class="pure-control-group fade-in" >
+      <input type="password" name="password_attempt" id="ps" placeholder="Password" required>
+    </div>
+
+    <div class="pure-controls-group fade-in">
+      <button type="submit" class="btn btn-sm btn-primary">Login</button>
+      <!-- <button type="submit" class="btn btn-sm btn-primary" id="submitbutton">Sign Up</button> -->
+    </div>
+  </form>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+</div>
+
+</div>
+
+<!-- <button type="button" class="btn btn-lg btn-primary">Primary</button> -->
+
+<!-- pure-botton pure-button-primary -->
+
+<!-- Password<br>
+<input type="text" type ="hidden" name="password_hash" >
+<br><br>
+<input type="submit" value="login">
+<input type="button" value="signup" class="signup">
+<button class = "signupbutton" type="button">Sign Up</button> -->

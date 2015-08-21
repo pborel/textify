@@ -1,0 +1,25 @@
+<div class="background">
+</div>
+
+<h1 class="company fade-in">Textify</h1>
+<h4 class = "small-text fade-in">All the audio textbooks you need, for free.</h4>
+
+<div class="center slideUp" >
+  <%= form_for @user, url: create_session_path, html: { class: "pure-form pure-form-aligned" } do |f| %>
+
+    <div class="pure-control-group fade-in">
+      <%= f.text_field :username, class: "pure-input-rounded" %>
+    </div>
+
+    <div class="pure-control-group fade-in">
+      <%= f.password_field :password, class: "pure-input-rounded" %>
+    </div>
+
+    <%= f.submit 'Login', class: "btn btn-sm btn-primary" %>
+
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+</div>
